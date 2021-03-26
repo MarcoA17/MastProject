@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="aerolineaMast"
+		class="org.codigorupestre.ejersicio.model.Voleto">
+		<constructor-arg name="numVoleto" value="00001"></constructor-arg>
+		<constructor-arg name="aerolinea"
+			value="AirMast"></constructor-arg>
+			<constructor-arg name="salida" value="Mexico"></constructor-arg>
+			<constructor-arg name="destino" value="Puebla"></constructor-arg>
+			<constructor-arg name="horario" value="12:00 pm"></constructor-arg>
+			<constructor-arg name="asiento" value="27"></constructor-arg>
+			<constructor-arg name="precio" value="165.00"></constructor-arg>
+	</bean>
+
+	<bean id="ventaVoleto" class="org.codigorupestre.ejersicio.model.Pasajero">
+		<property name="nombre" value="Marco"></property>
+		<property name="apellidos" value="Sanchez Tambolan"></property>
+		<property name="direccion" value="Izucar de matamoros"></property>
+		<property name="email" value="satm.8905@gmail.com"></property>
+		<property name="telefono" value="2431123818"></property>
+
+		<property name="voleto" ref="aerolineaMast"></property>
+	</bean>
+
+	
+
+
+
+</beans>
